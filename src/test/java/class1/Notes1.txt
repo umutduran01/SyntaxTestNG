@@ -1,0 +1,29 @@
+Pom.xml:
+    We place all our dependencies in this file between <dependencies> and </dependencies> tags.
+    When we want to place our dependencies but pom.xml gives error, click and reload Maven.
+
+Annotations:
+    @Test: Every test case is written in this annotation.
+    @BeforeMethod: Precondition that will work before every @Test.
+    @AfterMethod: Post-condition that will work after every @Test.
+
+Priority:
+    We can pass priorities to test cases.
+    @Test(priority=1) - It can be 1,2,3...
+    By default, it is 0.
+
+Enable and Disable:
+    We can enable or disable test cases in TestNG.
+    @Test(enabled = false)
+    It is true by default.
+
+Depends On:
+    We can link test cases to each other so if some of them fail, the rest will not execute.
+    @Test(dependsOnMethods = {"method name"})
+
+Assertion:
+    Hard Assertion:
+        1) Assert.assertEquals(actual string, expected string) - It compares 2 values. If they are equal the test will pass.
+        2) Assert.assertTrue(boolean) - Test will pass if boolean is true.
+
+    In hard assertion, if one case fails, the rest will not be executed.
