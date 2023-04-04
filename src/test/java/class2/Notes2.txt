@@ -1,0 +1,23 @@
+Soft Assertion;
+    1)Approach
+        create an object of class SoftAssert
+        call the assertions from this class
+        once you are done making assertion use soft.assertAll();
+
+    2)Advantage
+        It will still check other assertions even one fails.
+
+Data Provider;
+    It is used for data driven testing
+    Same scenario with different set of data
+
+    A data provider must have;
+    annotation,
+    it must have a name,
+    it must be a 2D array
+
+    1)Approach
+        use @dataProvider(name = "name") and give the data set in 2D array
+        link your test case with the data provider such as @Test(dataProvide = "name")
+        in parameters u are going to declare variable to hold data from data set
+
