@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/umutd/IdeaProjects/SyntaxTestNG/src/test/java/class4/Annotations2.java">
+        <classes>
+            <class name="class4.Annotations2"></class>
+            <class name="class4.AnnotationsBeforeClass"></class>
+        </classes>
+    </test>
+    <test name="abc">
+        <packages>
+            <package name="class4"></package>
+        </packages>
+    </test>
+</suite>
