@@ -18,7 +18,7 @@ public class Annotations {
         System.out.println("I am after method.");
     }
 
-    @Test
+    @Test(groups = "regression")
     public void FirstTestCase() {
         System.out.println("I am the first test case.");
     }

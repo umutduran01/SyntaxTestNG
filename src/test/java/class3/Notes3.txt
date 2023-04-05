@@ -1,0 +1,100 @@
+When we want to create TestNG XML;
+    1) Go to Settings and then Plugins.
+    2) In marketplace, type TestNG XML and download.
+    3) Create TestNG XML file for a particular class by right click and "Create TestNG XML".
+    4) Go to Code and click on Reformat Code.
+    5) Right click on project name and reload from disk.
+
+    Structure;
+
+    <suite>
+        <test name ="ABC">
+            <classes>
+                <class name="XYZ"></class>
+                <class name="123"></class>
+                <class name="ASD"></class>
+            </classes>
+        </test>
+    </suite>
+
+    Types;
+        1) Class Wise Execution;
+
+        In this test, we can control which classes to execute
+
+        <suite name="All Test Suite">
+            <test verbose="2" preserve-order="true"
+                  name="myTest">
+                <classes>
+                    <class name="class1.Priority"></class>
+                    <class name="class2.DataProviding"></class>
+                    <class name="class1.Assertions"></class>
+                </classes>
+            </test>
+        </suite>
+
+        2) Method Wise Execution
+
+        We can use "include" or "exclude" tag to run or not test cases.
+
+        <suite name="All Test Suite">
+            <test verbose="2" preserve-order="true"
+                  name="myTest">
+                <classes>
+                    <class name="class1.Priority">
+                        <methods>
+                            <include name="Atest"/>
+                            <include name="Btest"/>
+                            <exclude name="Ctest"/>
+                        </methods>
+                    </class>
+                </classes>
+            </test>
+        </suite>
+
+        3)Package Wise Execution
+
+        <suite name="All Test Suite">
+            <test verbose="2" preserve-order="true"
+                  name="myTest">
+                <packages>
+                    <package name="class1"></package>
+                </packages>
+            </test>
+        </suite>
+
+        4) Group Wise Execution
+
+        By this method, we can tag tests and run them according to their tags. While writing its code, we also need to mention package name.
+        We can get NullPointerException while grouping tests with before and after so we need to declare our before and after methods as (alwaysRun = true).
+
+        <suite name="All Test Suite">
+            <test verbose="2" preserve-order="true"
+                  name="myTest">
+                <groups>
+                    <run>
+                        <include name="regression"></include>
+                    </run>
+                </groups>
+                <packages>
+                    <package name="class1"></package>
+                </packages>
+            </test>
+        </suite>
+
+        5) Parallel Wise Execution
+
+        We can do multiple tests at the same time.
+
+        <suite name="All Test Suite">
+            <test verbose="2" preserve-order="true"
+                  name="parallel" parallel="classes" thread-count="4">
+                <classes>
+                    <class name="class1.Assertions"></class>
+                    <class name="class2.SoftAssertion"></class>
+                </classes>
+            </test>
+        </suite>
+
+        thread-count="4" is used for dividing the cpu in our computer to do parallel testing.
+        It should be equal to the number of classes/method in our code.

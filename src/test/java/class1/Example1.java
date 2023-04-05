@@ -19,7 +19,7 @@ public class Example1 {
 
     //WebDriver driver = new ChromeDriver();
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void SetupBrowser() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
@@ -28,12 +28,12 @@ public class Example1 {
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
     }
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void closeBrowser() {
         driver.quit();
     }
 
-    @Test
+    @Test(groups = "regression")
     public void loginFunctionality() {
         WebElement username = driver.findElement(By.xpath("//input[@id='txtUsername']"));
         username.sendKeys("Admin");

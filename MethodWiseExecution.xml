@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/umutd/IdeaProjects/SyntaxTestNG/src/test/java/class2/DataProviding.java">
+        <classes>
+            <class name="class1.Priority">
+                <methods>
+                    <include name="Atest"/>
+                    <include name="Btest"/>
+                    <exclude name="Ctest"/>
+                </methods>
+            </class>
+            <class name="class1.Assertions">
+                <methods>
+                    <include name="invalidCredentials"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
