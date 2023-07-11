@@ -13,5 +13,6 @@ public class listener implements ITestListener {
     @Override
     public void onTestFailure(ITestResult result) {
         System.out.println("Test case has failed.");
+        //take screenshot
     }
 }

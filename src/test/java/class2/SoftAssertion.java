@@ -19,7 +19,7 @@ public class SoftAssertion {
 
     public static WebDriver driver;
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void setup() {
 
         WebDriverManager.chromedriver().setup();
@@ -29,7 +29,7 @@ public class SoftAssertion {
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
     }
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void closeBrowser() {
         driver.quit();
     }

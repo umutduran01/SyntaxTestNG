@@ -15,12 +15,12 @@ public class Example1 {
 
     //test1
 
-    public static WebDriver driver; //We should declare on global leve otherwise it is local.
+    public static WebDriver driver; //We should declare on global level otherwise it is local.
 
     //WebDriver driver = new ChromeDriver();
 
     @BeforeMethod(alwaysRun = true)
-    public void SetupBrowser() {
+    public void setupBrowser() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.get("http://hrm.syntaxtechs.net/humanresources/symfony/web/index.php/auth/login");

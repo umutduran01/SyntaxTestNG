@@ -1,0 +1,1 @@
+It is a good practice to establish a connection, read a file that contains info of your credentials etc in @beforeTest
